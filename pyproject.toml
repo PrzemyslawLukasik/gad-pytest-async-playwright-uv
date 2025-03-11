@@ -7,8 +7,41 @@ requires-python = ">=3.13"
 dependencies = [
     "logging>=0.4.9.6",
     "playwright>=1.50.0",
+    "pre-commit>=4.1.0",
     "pytest>=8.3.5",
     "pytest-html>=4.1.1",
     "pytest-playwright-asyncio>=0.7.0",
     "pytest-xdist>=3.6.1",
 ]
+
+[tool.black]
+line-length = 80
+include = '\.pyi?$'
+exclude = '''
+
+(
+  /(
+     \.git
+    | \.hg
+    | \.mypy_cache
+    | \.tox
+    | \.venv
+    | _build
+    | buck-out
+    | build
+    | dist
+    | docs
+  )/
+
+)
+'''
+
+[tool.isort]
+profile = "black"
+multi_line_output = 3
+
+[tool.pyright]
+venvPath = "."
+venv = ".venv"
+executionEnvironments = [{ root = "." }]
+include = ["src"]
