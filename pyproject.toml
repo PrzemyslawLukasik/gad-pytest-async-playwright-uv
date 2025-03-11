@@ -1,0 +1,14 @@
+[project]
+name = "gad-pytest-async-playwright-uv"
+version = "0.1.0"
+description = "Automation of GAD application using Pytest, Playwright and asyncio"
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "logging>=0.4.9.6",
+    "playwright>=1.50.0",
+    "pytest>=8.3.5",
+    "pytest-html>=4.1.1",
+    "pytest-playwright-asyncio>=0.7.0",
+    "pytest-xdist>=3.6.1",
+]
