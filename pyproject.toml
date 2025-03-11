@@ -45,6 +45,3 @@ venvPath = "."
 venv = ".venv"
 executionEnvironments = [{ root = "." }]
 include = ["src"]
-
-[tool.mypy]
-ignore_missing_importe = true
