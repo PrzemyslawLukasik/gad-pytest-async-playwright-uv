@@ -8,5 +8,9 @@ To install `pre-commit` hook use `uv`:
 
     `uv add pre-commit`
 
+Next, install hook:
+
+    `pre-commit install`
+
 
 
