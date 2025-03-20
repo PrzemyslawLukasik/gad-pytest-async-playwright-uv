@@ -1,14 +1,16 @@
 from dataclasses import dataclass
 
-from playwright.async_api import Page, Locator, expect
+from playwright.async_api import Locator, Page, expect
 
 
 @dataclass
 class PracticePageLocators:
     page: Page
-    
+
     def practice_page_title(self) -> Locator:
-        return self.page.get_by_role("heading", name="Practice your test automation")
+        return self.page.get_by_role(
+            "heading", name="Practice your test automation"
+        )
 
     def with_ids_btn(self) -> Locator:
         return self.page.get_by_role("button", name="With IDs")
