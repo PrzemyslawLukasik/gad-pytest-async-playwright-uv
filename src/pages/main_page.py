@@ -1,5 +1,6 @@
 from dataclasses import dataclass
-from playwright.async_api import Page, Locator, expect
+
+from playwright.async_api import Locator, Page
 
 
 @dataclass
