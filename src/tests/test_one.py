@@ -9,6 +9,7 @@ from src.pages.practice_page import PracticePage
 my_logger = logging.getLogger(__name__)
 
 
+@pytest.mark.one
 @pytest.mark.asyncio(loop_scope="session")
 async def test_open_practice_page(page: Page) -> None:
     main_page = MainPage(page)
