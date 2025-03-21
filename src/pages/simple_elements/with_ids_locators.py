@@ -15,16 +15,16 @@ class WithIdsPageLocators:
         self.url = "/practice/simple-elements.html"
 
     def label(self) -> Locator:
-        return self.page.get_by_id("id-label-element")
+        return self.page.get_by_test_id("dti-label-element")
 
     def click_me_btn(self) -> Locator:
-        return self.page.get_by_test_id("dti-buttn-element")
+        return self.page.get_by_test_id("dti-button-element")
 
     def result_value(self) -> Locator:
         return self.page.get_by_test_id("dti-results")
 
     def results_container(self) -> Locator:
-        return self.page.get_by_test_id("results-container")
+        return self.page.locator("#results-container")
 
     def checkbox_input(self) -> Locator:
         return self.page.get_by_test_id("dti-checkbox")
